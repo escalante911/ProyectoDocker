@@ -1,0 +1,22 @@
+## YAML Template.
+---
+version: "3.7"
+services:
+  app:
+    image: proyecto-docker
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: example
+  mysql:
+    image: mysql:5.7
+    volumes: 
+      - proyecto-docker-data:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: example
+volumes:
+  proyecto-docker-data:

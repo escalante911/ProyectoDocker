@@ -1,0 +1,5 @@
+com\mycompany\proyectodocker\Usuarios_.class
+conexion\Conexion.class
+Interfaces\UsuarioDAO.class
+com\mycompany\proyectodocker\Usuarios.class
+DAO\UsuariosDaoMysql.class
