@@ -9,7 +9,7 @@ COPY src ./src
 RUN mvn -e -B package
 ######
 FROM tomcat:10.0.2-jdk15-openjdk-oraclelinux7
-#COPY --from=compilador /src/main/java /usr/local/tomcat/ProyectoDocker/pr.war
+COPY --from=compilador /ProyectoDocker/target/ProyectoDocker-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/proyecto.war
 #COPY holamundo2.war /usr/local/tomcat/webapps
 EXPOSE 3306
 CMD ["catalina.sh", "run"]
